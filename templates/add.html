@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Add a New Transaction</h1>
+  <p>Add your transactions with the form below:</p>
+
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.amount.label }} {{ form.amount() }}
+      {{ form.date.label }} {{ form.date() }}
+      {{ form.category.label }} {{ form.category() }}
+      {{ form.description.label }} {{ form.description() }}
+      {{ form.submit() }}
+
+		<a href="/">Back to Home</a>
+
+
+  </form>
+  
+  
+</div>
+{% endblock %}
+
+
+div class="form-container">
+		
+	</div>
